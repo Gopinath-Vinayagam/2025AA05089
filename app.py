@@ -7,14 +7,13 @@ from sklearn.metrics import confusion_matrix, classification_report, accuracy_sc
 
 st.set_page_config(
     page_title="ML Assignment 2 - Breast Cancer",
-    page_icon="🧬",
     layout="wide"
 )
 
 # ---------------------------
 # SIDEBAR
 # ---------------------------
-st.sidebar.title("🔍 Model Selection Panel")
+st.sidebar.title("Model Selection Panel")
 st.sidebar.markdown("Upload dataset and choose a model to evaluate.")
 
 # Load scaler
@@ -34,20 +33,20 @@ selected_model = st.sidebar.selectbox("Choose Model", list(model_paths.keys()))
 # ---------------------------
 # MAIN TITLE
 # ---------------------------
-st.title("🧬 Breast Cancer Classification")
+st.title(" Breast Cancer Classification")
 st.markdown("### Machine Learning Assignment 2 - M.Tech AIML")
 st.markdown("---")
 
 # ---------------------------
 # FILE UPLOAD
 # ---------------------------
-uploaded_file = st.file_uploader("📂 Upload CSV Test File", type=["csv"])
+uploaded_file = st.file_uploader("Upload CSV Test File", type=["csv"])
 
 if uploaded_file is not None:
 
     df = pd.read_csv(uploaded_file)
 
-    st.subheader("📊 Dataset Preview")
+    st.subheader(" Dataset Preview")
     if st.checkbox("Show Raw Data"):
         st.dataframe(df.head())
 
@@ -70,7 +69,7 @@ if uploaded_file is not None:
     predictions = model.predict(X)
 
     st.markdown("---")
-    st.subheader(f"📈 Results using {selected_model}")
+    st.subheader(f" Results using {selected_model}")
 
     # Accuracy Display
     accuracy = accuracy_score(y_true, predictions)
@@ -80,11 +79,11 @@ if uploaded_file is not None:
     col2.write("")
 
     # Classification Report
-    st.subheader("📋 Classification Report")
+    st.subheader(" Classification Report")
     st.text(classification_report(y_true, predictions))
 
     # Confusion Matrix
-    st.subheader("🔢 Confusion Matrix")
+    st.subheader(" Confusion Matrix")
     cm = confusion_matrix(y_true, predictions)
 
     fig, ax = plt.subplots()
