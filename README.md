@@ -21,7 +21,11 @@ Dataset Used: Breast Cancer Wisconsin Diagnostic Dataset
 - Target Variable: Diagnosis (M = Malignant, B = Benign)
 - Source: Kaggle Machine Learning Repository (https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset?resource=download)
 
-The dataset contains measurements computed from digitized images of fine needle aspirate (FNA) of breast mass tissue as per the dataset description
+The dataset contains measurements computed from digitized images of fine needle aspirate (FNA) of breast mass tissue as per the dataset description.
+
+Class Encoding:
+0 → Benign
+1 → Malignant
 
 --------------------------------------------------------------------------------------------
 

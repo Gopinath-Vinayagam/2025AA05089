@@ -79,6 +79,9 @@ if uploaded_file is not None:
     col2.write("")
 
     # Classification Report
+    st.markdown("**Class Labels:**")
+    st.markdown("- 0 → Benign Tumor")
+    st.markdown("- 1 → Malignant Tumor")
     st.subheader(" Classification Report")
     st.text(classification_report(y_true, predictions))
 
