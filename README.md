@@ -76,3 +76,6 @@ The following six classification models were implemented:
 ## Deployment
 
 The application is deployed using Streamlit Community Cloud.
+
+Live Streamlit App Link : 
+https://2025aa05089-rvhmcyxh5bpndxwjjjm9nc.streamlit.app/
